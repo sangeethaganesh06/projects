@@ -1,0 +1,148 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://img.freepik.com/premium-vector/deep-blue-sea-background-vector_77417-308.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container span {
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 10px;
+  background: #2c4766;
+  border-radius: 8px;
+  transform-origin: 128px;
+  transform: scale(2.5) rotate(calc(var(--i) * (360deg / 50)));
+  animation: animateBlink 4s linear infinite;
+  animation-delay: calc(var(--i) * (3s / 50));
+  margin-left: 40%;
+}
+
+@keyframes animateBlink {
+  0% { background: #0ef; }
+  25% { background: #2c4766; }
+}
+
+.login-box {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.1); /* Adds a semi-transparent background */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  color: #0ef;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  margin: 25px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #2c4766;
+  outline: none;
+  border-radius: 40px;
+  font-size: 1em;
+  color: #080808;
+  padding: 0 20px;
+  transition: 0.5s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+  border-color: #0ef;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #3ab5b51c;
+  pointer-events: none;
+  transition: 0.5s ease;
+  margin-left: 50%;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -10px;
+  font-size: 0.8em;
+  background: #1f293a;
+  padding: 0 6px;
+  color: #0ef;
+
+}
+
+.forgot-pass {
+  margin: -15px 0 10px;
+  text-align: center;
+}
+
+.forgot-pass a {
+  font-size: 0.85em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.forgot-pass a:hover {
+  text-decoration: underline;
+}
+
+input::placeholder {
+  font-size: 0.85rem;
+  font-family: "cursive", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  color: #3f3c3c;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #0ef;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #1f293a;
+  font-weight: 600;
+  margin-top: 20px;
+  
+}
+
+.signup-link {
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+.signup-link a {
+  font-size: 1em;
+  color: #0ef;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

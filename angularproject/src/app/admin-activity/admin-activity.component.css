@@ -1,0 +1,73 @@
+/* Add the styles for buttons */
+.btn-update, .btn-delete {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .btn-update {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .btn-update:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-delete {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .btn-delete:hover {
+    background-color: #e53935;
+  }
+  
+  /* Additional styling for table */
+  .table-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-title {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-table th, .user-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .user-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .user-table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .user-table td {
+    color: #333;
+  }
+  

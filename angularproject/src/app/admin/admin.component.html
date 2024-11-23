@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="admin-container">
+    <header>
+      <h1>Admin Dashboard</h1>
+
+      
+
+      <!-- Logout Button -->
+      <button class="logout-btn" routerLink="/home" routerLinkActive="active">
+        Logout
+      </button>
+    </header>
+
+    <!-- Admin Content Section -->
+    <div class="admin-content">
+      <!-- Activity Corner Section -->
+      <section class="activity-corner">
+       
+        <div class="activity-list">
+          <section  >
+            <h2 (click)="gotoUsers()">Activity Corner</h2>
+          </section>
+        </div>
+      </section>
+<!-- Data Upload Section -->
+<section class="data-upload">
+  <!-- This section is conditionally displayed if the uploadButton is true -->
+  <div *ngIf="uploadButton; else makeupload" >
+      <h2>Historical Data Upload</h2>
+<input type="file" id="dataFile"  class="file-input"   (change)="onFileSelect($event)" accept=".csv"   required />
+<button (click)="uploadFile()" [disabled]="!file">Upload</button>
+  </div>
+  <!-- This section is displayed when uploadButton is false -->
+  <ng-template #makeupload>
+    <section  >
+      <h2 (click)="button(true)">Upload Data</h2>
+    </section>
+  </ng-template>
+</section>
+      <!-- Data Center Section -->
+      <section class="data-center">
+        <h2>Data Center</h2>
+        <div class="data-info1">
+          <div *ngIf="uploadButton; else viewdata" >
+           <h3> no data recived</h3>
+      
+        </div>
+        <!-- This section is displayed when uploadButton is false -->
+        <ng-template #viewdata>
+          <section  >
+            <h2 (click)="button(true)">view data</h2>
+          </section>
+        </ng-template> 
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
