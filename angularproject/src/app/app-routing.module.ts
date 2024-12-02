@@ -23,6 +23,8 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'factory', component: FactoryComponent },
   { path: 'activity', component: AdminActivityComponent },
+
+  
   // Add a catch-all route to handle invalid routes
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

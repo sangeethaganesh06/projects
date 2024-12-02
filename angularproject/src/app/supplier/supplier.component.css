@@ -224,3 +224,178 @@ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 0% { opacity: 0; transform: translateY(20px); }
 100% { opacity: 1; transform: translateY(0); }
 }
+.data-center {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.active {
+  background-color: #0056b3;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.data-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.loader {
+  text-align: center;
+  font-size: 18px;
+  color: #007bff;
+}
+/* Modal Background Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal appears on top */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 800px;
+  overflow-y: auto; /* Allow scrolling if the content overflows */
+}
+
+/* Close Button Styles */
+.modal-content button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal-content button:hover {
+  background-color: #d32f2f;
+}
+
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+ 
+/* Styling for the modal overlay */
+.modal-overlay1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Use fixed to ensure it's centered relative to the viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Modal content styling */
+.modal-content1 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%; /* Modal takes 60% of the width */
+  max-width: 800px; /* Set a max width */
+  max-height: 80vh; /* Max height of 80% of the viewport */
+  overflow: hidden; /* Hide overflow content by default */
+  position: relative;
+}
+
+/* Table inside the modal that should scroll vertically */
+.modal-content1 table {
+  width: 100%; /* Ensure the table takes up the full width of the modal */
+  height: 100%; /* Make the table fill the height of the container */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  max-height: 50vh; /* Max height of the table (50% of the viewport height) */
+  display: block; /* Make the table behave like a block element to enable scrolling */
+  border-collapse: collapse; /* Optional: To remove any spacing between table cells */
+}
+
+/* Table rows and columns styling */
+.modal-content1 table th, .modal-content1 table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd; /* Light border for table cells */
+}
+
+/* Button styling inside the modal */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: gray;
+}
