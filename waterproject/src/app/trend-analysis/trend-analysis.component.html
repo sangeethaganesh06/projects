@@ -1,0 +1,76 @@
+<div class="trends-container">
+    <!-- Back  Button -->
+    <div class="arrow">
+      <span (click)="gotoUsers()"></span>
+      <span (click)="gotoUsers()"></span>
+      <span (click)="gotoUsers()"></span>
+  </div>
+    <h1 style="color: black; margin-left: 40%;">Aqua Trends</h1>
+  
+    <!-- Buttons for Trends -->
+    <div class="buttons" >
+      <button (click)="openDropdown('seasonal')">Seasonal Trends</button> <br> <br>
+      <button (click)="openDropdown('sector')">Sector Trends</button>   <br> <br>
+      <button (click)="openDropdown('waterSource')">Water Source Trends</button> <br> <br>
+    </div>
+  
+    <!-- Dropdown for Seasonal, Sector, and Water Source Trends -->
+    <div *ngIf="selectedTrend === 'seasonal'" class="dropdown-container">
+      <label for="season">Choose a season:</label>
+      <select id="season" [(ngModel)]="selectedSeason">
+        <option *ngFor="let season of seasonalOptions" [value]="season">{{ season }}</option>
+      </select>
+      <button (click)="getSeasonalTrends()">Submit</button>
+     
+      
+    </div>
+  
+    <div *ngIf="selectedTrend === 'sector'" class="dropdown-container">
+       <span class="close" (click)="closePopup()" style="margin-top: 20%;">&times;</span>
+      <label for="sector">Choose a sector:</label>
+      <select id="sector" [(ngModel)]="selectedSector">
+        <option *ngFor="let sector of sectorOptions" [value]="sector">{{ sector }}</option>
+      </select>
+      <button (click)="getSectorTrends()">Submit</button>
+    </div>
+  
+    <div *ngIf="selectedTrend === 'waterSource'" class="dropdown-container">
+      <span class="close" (click)="closePopup()">&times;</span>
+      <label for="waterSource">Choose a water source:</label>
+      <select id="waterSource" [(ngModel)]="selectedWaterSource">
+        <option *ngFor="let source of waterSourceOptions" [value]="source">{{ source }}</option>
+      </select>
+      <button (click)="getWaterSourceTrends()">Submit</button>
+    </div>
+  
+    <!-- Popup Modal for Results -->
+    <div class="modal" *ngIf="showPopup">
+      <div class="modal-content">
+       
+          <!-- Table to display JSON data -->
+          <table>
+          
+            <thead>
+              <span class="close" (click)="closePopup()">&times;</span>
+              <tr>
+                <th>Key</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Loop through the result object and display key-value pairs in rows -->
+              <tr *ngFor="let key of objectKeys(result)">
+                <td>{{ key }}</td>
+                <td>{{ result[key] }}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+    <!-- Bar Chart -->
+
+
+
+
+      

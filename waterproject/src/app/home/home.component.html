@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <h1 style="color: aqua; text-align: center; font-size: 4rem;">Water Management System</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+   
+  </nav>
+   <div class="tm-black-bg tm-mb-20 tm-about-box-2">
+              <!-- Drink Menu Page -->
+              <nav class="tm-black-bg tm-drinks-nav">
+                <ul>
+                  <li>
+                    <a href="#" class="tm-tab-link active" routerLink="/" routerLinkActive="active">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tm-tab-link" routerLink="/login" routerLinkActive="active">Admin</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tm-tab-link" [routerLink]="['/registration', 'Supplier']" routerLinkActive="active">Supplier</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tm-tab-link" [routerLink]="['/registration', 'Quality']" routerLinkActive="active">Quality</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tm-tab-link" [routerLink]="['/registration', 'Aquatrace']" routerLinkActive="active">Aqua Trace</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tm-tab-link" [routerLink]="['/registration', 'FutureForecast']" routerLinkActive="active">Future Forecast</a>
+                  </li>
+                </ul>
+              </nav> 
+            </div>
+  
+            <!-- About Us Page -->
+            <div id="about" class="tm-page-content" style="width: 40%;  margin-left: 5%; margin-top: 10%;">
+              <div class="tm-black-bg tm-mb-20 tm-about-box-1">              
+                <h2 class="tm-text-primary tm-about-header">Conserve Water, Preserve Life</h2>
+                <div class="tm-list-item tm-list-item-2">                
+                  <img src="https://images.pexels.com/photos/40784/drops-of-water-water-nature-liquid-40784.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image" class="tm-list-item-img tm-list-item-img-big">
+                  <div class="tm-list-item-text-2">
+                    <p> Water is critical for sustainable development, including environmental integrity and the alleviation of poverty and hunger, and is indispensable for human health and well-being</p>
+                    
+                  </div>                
+                </div>
+              </div>
+              </div>
+              <div id="about" class="tm-page-content" style="width: 40%; margin-left: 50%;  margin-top: 10%;">
+              <div class="tm-black-bg tm-mb-20 tm-about-box-2">              
+                <div class="tm-list-item tm-list-item-2">                
+                  <div class="tm-list-item-text-2">
+                    <h2 class="tm-text-primary">All the water that will ever be is right now.</h2>
+                    <p>Water is the most critical resource issue of our lifetime and our children's lifetime. The health of our waters is the principal measure of how we live on the land.</p>                  
+                  </div>                
+                  <img src="https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image" class="tm-list-item-img tm-list-item-img-big tm-img-right">                
+                </div>
+              </div>
+            </div>
+            <!-- end About Us Page -->
+  
+    <!-- Background video -->
+    <div class="tm-video-wrapper">
+        <i id="tm-video-control-button" class="fas fa-pause"></i>
+        <video autoplay muted loop id="tm-video">
+            <source src="assets/videos/wave-cafe-video-bg.mp4" type="video/mp4">
+        </video>
+    </div>
+  

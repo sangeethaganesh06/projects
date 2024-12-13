@@ -1,0 +1,450 @@
+.back-button {
+  padding: 8px 16px;
+  margin-bottom: 15px;
+  background-color: #00ff9557;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #16b137a1;
+}
+.back-button {
+  padding: 8px 16px;
+  margin-bottom: 15px;
+  background-color: #00ff9557;
+  color: #c0392b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.arrow {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-bottom: 5px solid hsl(220, 20%, 94%);
+  border-right: 5px solid #fafafc;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://media.istockphoto.com/id/1829525202/photo/businessman-touch-virtual-ai-network-connection-icons.jpg?s=612x612&w=0&k=20&c=23lkVy5rcVRGCLNIwTVw1VeFPRp9ZjgZOlvMcmzRCQk=");
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling of the image */
+}
+/* General Reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Body and Overall Layout */
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f4f4f9;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+/* Admin Container */
+.admin-container {
+background-color: #ffffff42;
+width: 80%;
+max-width: 1200px;
+border-radius: 15px;
+box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+padding: 20px;
+animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Section */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+border-bottom: 2px solid #e0e0e0;
+}
+
+header h1 {
+color: #333;
+font-size: 2.2em;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+.logout-btn {
+background-color: #e74c3c;
+color: #fff;
+padding: 10px 20px;
+font-size: 1em;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+background-color: #c0392b;
+}
+
+/* Content Section */
+.admin-content {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+margin-top: 20px;
+}
+
+/* Data Upload Section */
+.data-upload {
+background-color: #ecf0f1;
+padding: 20px;
+border-radius: 10px;
+width: 30%;
+animation: slideInLeft 1s ease-in-out;
+}
+
+.data-upload h2 {
+font-size: 1.5em;
+color: #2c3e50;
+margin-bottom: 15px;
+}
+
+.file-input {
+width: 100%;
+padding: 10px;
+border: 1px solid #bdc3c7;
+border-radius: 5px;
+margin-bottom: 20px;
+}
+
+.upload-btn {
+background-color: #3498db;
+color: #fff;
+padding: 10px 20px;
+font-size: 1em;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+background-color: #2980b9;
+}
+
+/* Activity Corner Section */
+.activity-corner {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+width: 30%;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+animation: slideInUp 1s ease-in-out;
+}
+
+.activity-corner h2 {
+font-size: 1.5em;
+color: #2c3e50;
+margin-bottom: 15px;
+}
+
+.activity-list {
+list-style-type: none;
+}
+
+.activity-item {
+background-color: #f4f6f7;
+margin-bottom: 10px;
+padding: 10px;
+border-radius: 5px;
+color: #34495e;
+font-size: 1em;
+animation: fadeInUp 1s ease-out;
+}
+
+/* Data Center Section */
+.data-center {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+width: 30%;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+animation: slideInRight 1s ease-in-out;
+}
+
+.data-center h2 {
+font-size: 1.5em;
+color: #2c3e50;
+margin-bottom: 15px;
+}
+
+.data-info {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+.data-info1 {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+.data-box {
+background-color: #ecf0f1;
+padding: 20px;
+border-radius: 10px;
+width: 30%;
+text-align: center;
+font-size: 1.2em;
+color: #2c3e50;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+0% { transform: translateX(-100%); }
+100% { transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+0% { transform: translateY(100%); }
+100% { transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+0% { transform: translateX(100%); }
+100% { transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+0% { opacity: 0; transform: translateY(20px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+.data-center {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.active {
+  background-color: #0056b3;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.data-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.loader {
+  text-align: center;
+  font-size: 18px;
+  color: #007bff;
+}
+/* Modal Background Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal appears on top */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 800px;
+  overflow-y: auto; /* Allow scrolling if the content overflows */
+}
+
+/* Close Button Styles */
+.modal-content button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal-content button:hover {
+  background-color: #d32f2f;
+}
+
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+ 
+/* Styling for the modal overlay */
+.modal-overlay1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Use fixed to ensure it's centered relative to the viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Modal content styling */
+.modal-content1 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%; /* Modal takes 60% of the width */
+  max-width: 800px; /* Set a max width */
+  max-height: 80vh; /* Max height of 80% of the viewport */
+  overflow: hidden; /* Hide overflow content by default */
+  position: relative;
+}
+
+/* Table inside the modal that should scroll vertically */
+.modal-content1 table {
+  width: 100%; /* Ensure the table takes up the full width of the modal */
+  height: 100%; /* Make the table fill the height of the container */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  max-height: 50vh; /* Max height of the table (50% of the viewport height) */
+  display: block; /* Make the table behave like a block element to enable scrolling */
+  border-collapse: collapse; /* Optional: To remove any spacing between table cells */
+}
+
+/* Table rows and columns styling */
+.modal-content1 table th, .modal-content1 table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd; /* Light border for table cells */
+}
+
+/* Button styling inside the modal */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: gray;
+}

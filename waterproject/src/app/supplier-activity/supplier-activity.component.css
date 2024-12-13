@@ -1,0 +1,107 @@
+.back{
+  background-image: url("https://images.pexels.com/photos/4006472/pexels-photo-4006472.jpeg?auto=compress&cs=tinysrgb&w=600"); /* Replace with a relevant image URL */
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px;
+  width: 100%;
+ 
+}
+
+
+.table-container {
+  width: 80%;
+  height: 70vh; /* Use viewport height for responsive height */
+  padding: 20px;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 10%;
+  align-content: center;
+  overflow: auto; /* Enable scrolling for the table container */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Optional styling for container */
+}
+
+  
+  h2 {
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .animated-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .animated-table th,
+  .animated-table td {
+    padding: 12px 15px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .animated-table th {
+    background-color: #e22737;
+    color: white;
+  }
+  
+  .animated-table tbody tr {
+    background-color: #eccccc;
+    transition: background-color 0.3s ease;
+  }
+  
+  .animated-table tbody tr:nth-child(even) {
+    background-color: #eb936b;
+  }
+  
+  .animated-table tbody tr:hover {
+    background-color: #eecea4;
+    transform: scale(1.01);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .animated-table tbody td {
+    font-family: 'Roboto', sans-serif;
+  }
+  .arrow {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+  
+  .arrow span {
+    display: block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-bottom: 5px solid hsl(27, 85%, 49%);
+    border-right: 5px solid #ad1212;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
+  
+  .arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  
+  .arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  
+  @keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+  }

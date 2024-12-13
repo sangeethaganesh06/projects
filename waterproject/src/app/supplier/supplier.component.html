@@ -1,0 +1,129 @@
+<div class="container">
+   <!-- Back  Button -->
+ <div class="arrow">
+  <span (click)="gotoUsers()"></span>
+  <span (click)="gotoUsers()"></span>
+  <span (click)="gotoUsers()"></span>
+</div>
+  <div class="admin-container">
+    <header>
+      <h1>Supplier corner</h1>
+      <!-- Logout Button -->
+      <button class="logout-btn" routerLink="/home" routerLinkActive="active">
+        Logout
+      </button>
+    </header>
+
+    <!-- Admin Content Section -->
+    <div class="admin-content">
+      <!-- Activity Corner Section -->
+      <section class="activity-corner">
+       
+        <div class="activity-list">
+          <section  >
+            <h2 routerLink="/supplieractivity" routerLinkActive="active">Activity Corner</h2>
+          </section>
+        </div>
+      </section>
+<!-- Data Upload Section -->
+<section class="data-upload">
+  <!-- This section is conditionally displayed if the uploadButton is true -->
+  <div *ngIf="uploadButton; else makeupload" >
+      <h2>Historical Data Upload</h2>
+<input type="file" id="dataFile"  class="file-input"   (change)="onFileSelect($event)" accept=".csv"   required />
+<button (click)="uploadFile()" [disabled]="!file">Upload</button>
+  </div>
+  <!-- This section is displayed when uploadButton is false -->
+  <ng-template #makeupload>
+    <section  >
+      <h2 (click)="button(true)">Upload Data </h2>
+    </section>
+  </ng-template>
+</section>
+       <!-- Data Center Section -->
+       <section class="data-center">
+        <div class="data-info1">
+          <div *ngIf="uploadButton1; else viewdata">
+            <h2>Supplier Data</h2>
+            <div class="button-container">
+             
+           <button (click)="showData('resource')"
+           [class.active]="activeTab === 'resource'" (click)="showModal()">   Resource Data
+              </button>
+              <br /><br />
+              <button
+                (click)="showData('performance')"
+                [class.active]="activeTab === 'performance'"
+                (click)="showModal1()"
+              >
+                Performance Data
+              </button>
+            </div>
+
+           <!-- Resource Data Modal -->
+<div *ngIf="isModalOpen" class="modal-overlay">
+  <div class="modal-content">
+    <h2>Resource Efficiency Data</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Resource Type</th>
+          <th>Total Collection Capacity (Liters)</th>
+          <th>Total Supply Capacity (Liters)</th>
+          <th>Average Efficiency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resourceType of objectKeys">
+          <td>{{ resourceType }}</td>
+          <td>{{ resourceEfficiency[resourceType]?.totalCollectionCapacity }}</td>
+          <td>{{ resourceEfficiency[resourceType]?.totalSupplyCapacity }}</td>
+          <td>{{ resourceEfficiency[resourceType]?.averageEfficiency }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="closeModal()">Close</button>
+    
+  </div>
+</div>
+
+<!-- Performance Data Modal -->
+<div *ngIf="isModalOpen1" class="modal-overlay1">
+  <div class="modal-content1">
+    <h2>Performance Efficiency Data</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Supplier Name</th>
+          <th>Collected Water (Liters)</th>
+          <th>Supplied Water (Liters)</th>
+          <th>Storage Efficiency (%)</th>
+          <th>Performance Efficiency (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let supplier of performanceData | keyvalue">
+          <td>{{ supplier.key }}</td>
+          <td>{{ supplier.value.CollectedWater | number }}</td>
+          <td>{{ supplier.value.SuppliedWater | number }}</td>
+          <td>{{ supplier.value.StorageEfficiency | number: '1.2-2' }}%</td>
+          <td>{{(supplier.value.PerformanceEfficiency /100 ) | number: '1.2-2' }} %</td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="closeModal1()">Close</button> 
+    <button (click)="submitPerformanceData()">Submit </button>
+  </div>
+</div>
+      
+          </div>
+          <ng-template #viewdata>
+            <section>
+              <h2 (click)="button1(true)">Data Center</h2>
+            </section>
+          </ng-template>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

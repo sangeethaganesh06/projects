@@ -1,0 +1,41 @@
+<div class= "back"> 
+    
+    
+    <div class="arrow" (click)="gotoUsers()">
+    <span (click)="gotoUsers()"></span>
+    <span (click)="gotoUsers()"></span>
+    <span (click)="gotoUsers()"></span>
+  </div> <div style="text-align: center;"> <h1 style="color: #e22737;margin-top: 1%;">Supplier Data</h1>     </div>
+
+<div class="table-container">
+  
+    <table class="animated-table">
+      <thead>
+        <tr>
+          <th>Supplier ID</th>
+          <th>Name</th>
+          <th>Resource Type</th>
+          <th>Collected Capacity (L)</th>
+          <th>Supplied Capacity (L)</th>
+          <th>Efficiency (%)</th>
+          <th>Cost/Liter</th>
+          <th>Total Cost</th>
+          <th>Environmental Impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let supplier of suppliers">
+          <td>{{ supplier.supplierId }}</td>
+          <td>{{ supplier.supplierName }}</td>
+          <td>{{ supplier.resourceType }}</td>
+          <td>{{ supplier.collectedCapacityLiters | number }}</td>
+          <td>{{ supplier.suppliedCapacityLiters | number }}</td>
+          <td>{{ supplier.storageEfficiencyPercentage | percent:'1.0-0' }}</td>
+          <td>{{ supplier.costPerLiter | currency }}</td>
+          <td>{{ supplier.totalCost | currency }}</td>
+          <td>{{ supplier.environmentalImpact }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

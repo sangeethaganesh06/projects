@@ -1,0 +1,106 @@
+<div class="main">
+   <!-- Back  Button -->
+   <div class="arrow">
+    <span (click)="gotoUsers()"></span>
+    <span (click)="gotoUsers()"></span>
+    <span (click)="gotoUsers()"></span>
+</div>
+  <div class="navbar">
+     <h2 style="color: white; margin-left: 40%;">Aqua Trace Trends</h2> 
+    
+  </div>
+  <div class="sidebar">
+    <img src="https://cdn-icons-png.flaticon.com/128/9073/9073147.png" class="menu" (click)="toggleMenu()">
+    <span [@menuAnimation]="menuOpen ? 'open' : 'closed'">
+      <br> <br>
+      <h2 *ngIf="menuOpen" class="hover-shadow hover-color" routerLink="/trendanalysis" routerLinkActive="active">Trend Analysis</h2> <br> <br>
+      <h2 *ngIf="menuOpen"  class="hover-shadow hover-color" (click)="openModal()" >Water Trace Insights</h2> <br> <br>
+      <h2 *ngIf="menuOpen"   class="hover-shadow hover-color" (click)="getYearlyTrends()" >Source Evaluation</h2> <br> <br>
+      <h2 *ngIf="menuOpen"   class="hover-shadow hover-color"  routerLink="/home" routerLinkActive="active" >Log Out</h2> <br> <br>
+    </span>
+ 
+
+    <div class="popup-container1" *ngIf="showchart">
+      <div class="popup-content1">
+        <button class="close-btn1" (click)="closePopup()" style="color: black;">×</button>
+        <h2>Yearly Trends</h2>
+        <!-- Chart -->
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+
+<div>
+  <div class="popup-modal" *ngIf="isModalOpen" [ngClass]="{'active': isModalOpen}">
+    <div class="popup-content">
+      <button class="close-btn" (click)="closeModal()">X</button>
+      <h2 style="color: black;">Water Management Data</h2>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Contaminant Level (ppm)</th>
+              <th>Date</th>
+              <th>Dissolved Oxygen (mg/L)</th>
+              <th>pH Level</th>
+              <th>Rainfall (days)</th>
+              <th>Rainfall Quantity (mm)</th>
+              <th>Region</th>
+              <th>Season</th>
+              <th>Sector</th>
+              <th>Turbidity (NTU)</th>
+              <th>Water Consumed (ml)</th>
+              <th>Water Recycled (ml)</th>
+              <th>Water Savings (ml)</th>
+              <th>Water Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of waterData">
+              <td>{{ item.id }}</td>
+              <td>{{ item.contaminantLevelPpm }}</td>
+              <td>{{ item.date | date }}</td>
+              <td>{{ item.dissolvedOxygenMgL }}</td>
+              <td>{{ item.pHLevel }}</td>
+              <td>{{ item.rainfallDays}}</td>
+              <td>{{ item.rainfallQuantityMM }}</td>
+              <td>{{ item.region }}</td>
+              <td>{{ item.season }}</td>
+              <td>{{ item.sector }}</td>
+              <td>{{ item.turbidityNTU }}</td>
+              <td>{{ item.waterConsumedML }}</td>
+              <td>{{ item.waterRecycledML }}</td>
+              <td>{{ item.waterSavingsML }}</td>
+              <td>{{ item.waterSource }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+    
+    
+
+
+
+      
+ 
+  </div>
+  <div class="bubbles">
+    <img src="https://i.postimg.cc/Xv020Ln3/bubble.png">
+    <img src="https://i.postimg.cc/Xv020Ln3/bubble.png">
+    <img src="https://i.postimg.cc/Xv020Ln3/bubble.png">
+    <img src="https://i.postimg.cc/Xv020Ln3/bubble.png">
+    <img src="https://i.postimg.cc/Xv020Ln3/bubble.png">
+    <img src="https://i.postimg.cc/Xv020Ln3/bubble.png">
+    <img src="https://i.postimg.cc/Xv020Ln3/bubble.png">
+    <img src="https://i.postimg.cc/Xv020Ln3/bubble.png">
+    <img src="https://i.postimg.cc/Xv020Ln3/bubble.png">
+
+    
+  </div>
+

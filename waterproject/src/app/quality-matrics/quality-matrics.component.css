@@ -1,0 +1,155 @@
+/* General Container Styling */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 100%;
+    background-image: url("https://images.pexels.com/photos/3054292/pexels-photo-3054292.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .arrow {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.arrow span {
+    display: block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-bottom: 5px solid #2f15c4;
+    border-right: 5px solid rgb(6, 41, 236);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+  /* Header Styling */
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(45deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Table Styling */
+  table {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 90%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-left: 5%;
+    background-color:#ddd;
+  }
+  
+  thead {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  thead th {
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+  }
+  
+  tbody tr {
+    transition: all 0.3s ease;
+  }
+  
+  tbody tr:nth-child(even) {
+    background: #f7f9fc2f;
+  }
+  
+  tbody tr:hover {
+    background: rgba(47, 133, 145, 0.1);
+    transform: scale(1.02);
+  }
+  
+  tbody td {
+    padding: 15px;
+    font-size: 1rem;
+    color: #34495e;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Risk Level Styling */
+
+    .badge {
+        font-size: 0.9rem;
+       
+        
+      
+       
+      }
+  
+  
+  
+  /* Deviation & Contributions Lists */
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  
+  li {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    table {
+      font-size: 0.85rem;
+    }
+  
+    th, td {
+      padding: 10px;
+    }
+  }
+  

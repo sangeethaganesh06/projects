@@ -1,0 +1,98 @@
+<div class="containers">
+  
+   <!-- Back  Button -->
+   <div class="arrow">
+    <span (click)="gotoUsers()"></span>
+    <span (click)="gotoUsers()"></span>
+    <span (click)="gotoUsers()"></span>
+</div>
+
+    <h1 class="title">Future Forecast</h1>
+  
+    <!-- Submodules for Prediction -->
+    <div class="submodules">
+      <h3 class="submodule-btn" (click)="openModal('Consumption')">Predict Consumption</h3>
+      <br><br>
+      <h3 class="submodule-btn" (click)="openModal('Rainfall')">Predict Rainfall</h3>
+      <br><br>
+      <h3 class="submodule-btn" (click)="openModal('Recycling')">Predict Recycling</h3>
+      <br><br>
+    </div>
+  
+    <!-- Modal for Prediction Form and Results -->
+    <div *ngIf="showModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" (click)="closeModal()">×</span>
+        <h2>{{ 'Predict ' + currentPredictionType }}</h2>
+
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="predictionForm" class="form">
+          <div class="form-group">
+            <label for="season">Season:</label>
+            <select id="season" formControlName="season" required class="input-field">
+              <option value="Winter">Winter</option>
+              <option value="Spring">Spring</option>
+              <option value="Summer">Summer</option>
+              <option value="Autumn">Autumn</option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="region">Region:</label>
+            <select id="region" formControlName="region" required class="input-field">
+              <option value="Washington">Arkansas</option>
+              <option value="Arkansas">Colorado</option>
+              <option value="Illinois">Florida</option>
+              <option value="Colorado">Texas</option>
+             
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="year">Year:</label>
+            <select id="year" formControlName="year" required class="input-field">
+              <option value="2028">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+            </select>
+          </div>
+  
+          <button type="submit" class="submit-btn" [disabled]="predictionForm.invalid">Predict</button>
+        </form>
+  
+        <!-- Display Prediction Results -->
+        <div *ngIf="predictionResult" class="results">
+          <span class="close-btn" (click)="closeRainfallModal()">×</span>
+          <p><strong>Water Consumed (ml):</strong> {{ predictionResult.waterConsumedML }}</p>
+          <p><strong>Water Savings (ml):</strong> {{ predictionResult.waterSavingsML }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="showRainfallModal" class="modal">
+      <div class="modal-content">
+       
+        <h2>Rainfall Prediction Results</h2>
+        <div class="results">
+          <span class="close-btn" (click)="closeRainfallModal()">×</span>
+          <p><strong>Rainfall Days:</strong> {{ predictionResult?.rainfallDays }}</p>
+          <p><strong>Rainfall Quantity (mm):</strong> {{ predictionResult?.rainfallQuantity }}</p>
+        </div>
+      </div>
+    </div> 
+
+    <div *ngIf="showRecycledModal" class="modal">
+      <div class="modal-content">
+       
+        <h2>Recycled Prediction Results</h2>
+        <div class="results">
+          <span class="close-btn" (click)="closeModal()">×</span>
+          <p><strong>Recycled Water:</strong> {{ predictionResult?.predictedWaterRecycledML }}</p>
+          
+        </div>
+      </div>
+    </div> 
+
+  </div>
+ 
+  

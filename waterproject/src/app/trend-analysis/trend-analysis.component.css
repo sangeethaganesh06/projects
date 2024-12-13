@@ -1,0 +1,175 @@
+body{
+  overflow: unset;
+}
+
+.trends-container{
+
+ 
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  margin: 0;
+  padding: 0; /* Remove padding to avoid unwanted space */
+  background-image: url("https://images.pexels.com/photos/40784/drops-of-water-water-nature-liquid-40784.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+  background-size: cover; /* Ensures the image covers the entire screen */
+
+  top: 0;
+  left: 0;
+ 
+}
+/* Style for the buttons container */
+.buttons {
+  display: flex;            /* Enable flexbox */
+  flex-direction: column;   /* Stack buttons vertically */
+  align-items: flex-end;    /* Align buttons to the right */
+  gap: 10px;                /* Add space between buttons */
+  padding-right: 20px;      /* Add some padding to the right to ensure there's space */
+  margin-top: 20px;         /* Add some space at the top if needed */
+}
+
+/* Style for individual buttons */
+.buttons button {
+  padding: 10px 20px;       /* Add padding inside the button */
+  font-size: 16px;          /* Adjust font size */
+  background-color: #80bee7; /* Green background color */
+  color: white;             /* White text */
+  border: none;             /* Remove border */
+  border-radius: 5px;       /* Rounded corners */
+  cursor: pointer;         /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+.back-button {
+  padding: 8px 16px;
+  margin-bottom: 15px;
+  background-color: #00ff9557;
+  color: #c0392b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.arrow {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-bottom: 5px solid #1279da;
+  border-right: 5px solid rgb(82, 154, 221);
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+/* Add hover effect for buttons */
+.buttons button:hover {
+  background-color: #eaf0ea; /* Darker green on hover */
+  color: black;
+}
+
+  
+  .dropdown-container {
+    margin: 20px auto;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+  }
+  .chart-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+ 
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  td {
+    background-color: #ffffff;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover td {
+    background-color: #ddd;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    text-align: left;
+  }
+  
+  .close {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 34px;
+    color: black;
+    margin-right: 20%;
+    margin-top: 10%;
+  }
+  

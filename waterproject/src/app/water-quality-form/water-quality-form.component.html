@@ -1,0 +1,71 @@
+<div class="container1">
+  <!-- Back  Button -->
+  <div class="arrow">
+    <span (click)="gotoUsers()"></span>
+    <span (click)="gotoUsers()"></span>
+    <span (click)="gotoUsers()"></span>
+</div>
+    <h1>Water Quality Prediction</h1>
+    <form [formGroup]="waterQualityForm" (ngSubmit)="onSubmit()">
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="waterSource">Water Source:</label>
+        <input type="text" formControlName="waterSource" id="waterSource" class="form-control" />
+      </div>
+  
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="location">Location:</label>
+        <input type="text" formControlName="location" id="location" class="form-control" />
+      </div>
+  
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" formControlName="temperature" id="temperature" class="form-control" />
+      </div>
+  
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="turbidity">Turbidity (NTU):</label>
+        <input type="number" formControlName="turbidity" id="turbidity" class="form-control" />
+      </div>
+  
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="phLevel">pH Level:</label>
+        <input type="number" formControlName="phLevel" id="phLevel" class="form-control" />
+      </div>
+  
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="dissolvedOxygen">Dissolved Oxygen (mg/L):</label>
+        <input type="number" formControlName="dissolvedOxygen" id="dissolvedOxygen" class="form-control" />
+      </div>
+  
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="chlorineLevels">Chlorine Levels (mg/L):</label>
+        <input type="number" formControlName="chlorineLevels" id="chlorineLevels" class="form-control" />
+      </div>
+  
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="nitrates">Nitrates (mg/L):</label>
+        <input type="number" formControlName="nitrates" id="nitrates" class="form-control" />
+      </div>
+  
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="heavyMetals">Heavy Metals (mg/L):</label>
+        <input type="number" formControlName="heavyMetals" id="heavyMetals" class="form-control" />
+      </div>
+  
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="tds">TDS (ppm):</label>
+        <input type="number" formControlName="tds" id="tds" class="form-control" />
+      </div>
+  
+      <div class="form-group" style="padding-right: 20%;">
+        <label for="ammonia">Ammonia (mg/L):</label>
+        <input type="number" formControlName="ammonia" id="ammonia" class="form-control" />
+      </div>
+      <div class="form-group" style="padding-right: 20%;">
+        <br>
+      <input type="submit" class="btn btn-primary"  style="background-color: rgba(12, 12, 12, 0.911);color: rgb(247, 237, 237);
+    transform: scale(1.02); "   value="Predict Water Quality">   </div>
+    </form>
+  
+    
+  
